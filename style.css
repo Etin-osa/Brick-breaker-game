@@ -44,7 +44,7 @@
 .child {
   height: 24px;
   width: 90px;
-  background: #00b7ff;
+  background: #0795ce;
 }
 
 /* score Board */
@@ -57,6 +57,24 @@
   font-size: large;
   display: flex;
   justify-content: space-between;
+}
+
+
+/* Start */
+
+.start {
+  position: absolute;
+  height: 100%; width: 100%;
+  background: #0000007a;
+  color: #eee;
+  font-size: 45px;
+  z-index: 5;
+}
+
+.edge {
+  opacity: 0;
+  z-index: -5;
+  pointer-events: none;
 }
 
 

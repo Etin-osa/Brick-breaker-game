@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Score Board
   const points = document.getElementById('points')
   const lives = document.getElementById('lives')
+  const fir = document.querySelector('.start')
   const finale = document.querySelector('.finale')
   const allPs = document.getElementById('tot-point')
   const allLive = document.getElementById('tot-live')
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Listening for mousemove
   cont.addEventListener('mousemove', e => {
-    mouse.curx = e.x - (183 + 43)
+    mouse.curx = e.x - (270 + 43)
 
     // Paddle Left
     paddle.style.left = `${mouse.curx}px`
@@ -56,7 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Listening for Click Event
-  cont.addEventListener('click', start, { once: true })
+  cont.addEventListener('click', () => {
+    // Remove Click to start
+    fir.classList.add('edge')
+
+    // Begin Game
+    start()
+  }, { once: true })
 
 
   // Listening for Click Event
